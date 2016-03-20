@@ -2,8 +2,9 @@
 
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.geometry.Insets?>
+<?import com.gege83.fx.customControl.MyCustomControl?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gege83.fx.customControl.MainController">
 	<center>
 		<MyCustomControl onClickMe="#doSomeThing" />
 	</center>

@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -25,7 +26,7 @@ public class MainController implements Initializable {
 	}
 
 	@FXML
-	public void doSomeThing() {
+	public void doSomeThing(ActionEvent event) {
 		service.doSomeThing();
 	}
 

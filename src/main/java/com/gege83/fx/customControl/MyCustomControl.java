@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -13,14 +13,14 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.HBox;
 
-@Configuration
+@Component
 public class MyCustomControl extends HBox {
 
 	private final SomeService service;
 	private final ObjectProperty<EventHandler<ActionEvent>> onClickMeHandler = new SimpleObjectProperty<>();
 
 	@FXML
-	protected void clickMe(ActionEvent event) {
+	protected void doClickMe(ActionEvent event) {
 		service.doSomeThing();
 	}
 
@@ -35,6 +35,7 @@ public class MyCustomControl extends HBox {
 		}
 	}
 
+	//
 	public EventHandler<ActionEvent> getOnClickMe() {
 		return onClickMeHandler.get();
 	}

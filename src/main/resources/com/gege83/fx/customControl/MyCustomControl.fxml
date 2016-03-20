@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import com.gege83.fx.customControl.MyCustomControl?>
 
-<MyCustomControl xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
-	<children>
-		<Button text="click me" onAction="#clickMe" />
-	<children>
-</BorderPane>
+<fx:root type="com.gege83.fx.customControl.MyCustomControl"
+	xmlns:fx="http://javafx.com/fxml/1" >
+	<BorderPane>
+		<center>
+			<Button text="click me" onAction="#doClickMe" />
+		<center>
+	<BorderPane>
+</fx:root>
