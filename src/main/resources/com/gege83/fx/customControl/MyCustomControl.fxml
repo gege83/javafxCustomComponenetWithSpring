@@ -2,10 +2,8 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import com.gege83.fx.customControl.MyCustomControl?>
 
-<fx:root xmlns:fx="http://javafx.com/fxml/1" type="com.gege83.fx.customControl.MyCustomControl" >
+<fx:root xmlns:fx="http://javafx.com/fxml/1" type="HBox" >
 	<BorderPane>
 		<center>
 			<Button text="click me" onAction="#doClickMe" />

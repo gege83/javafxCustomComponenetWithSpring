@@ -23,6 +23,7 @@ public class MyCustomControl extends HBox {
 	@FXML
 	protected void doClickMe(ActionEvent event) {
 		service.doSomeThing();
+		onClickMeHandler.get().handle(event);
 	}
 
 	@Autowired
@@ -33,8 +34,6 @@ public class MyCustomControl extends HBox {
 			fxmlLoader.setRoot(this);
 			fxmlLoader.setController(this);
 			fxmlLoader.load(getClass().getResourceAsStream("MyCustomControl.fxml"));
-			// SpringFXMLLoader.create().applicationContext(applicationContext)
-			// .location(getClass().getResource("MyCustomControl.fxml")).load();
 		} catch (final IOException e) {
 			e.printStackTrace();
 		}
@@ -45,7 +44,7 @@ public class MyCustomControl extends HBox {
 		return onClickMeHandler.get();
 	}
 
-	public void setOnClickMeHandler(EventHandler<ActionEvent> onClickMe) {
+	public void setOnClickMe(EventHandler<ActionEvent> onClickMe) {
 		this.onClickMeHandler.set(onClickMe);
 	}
 
