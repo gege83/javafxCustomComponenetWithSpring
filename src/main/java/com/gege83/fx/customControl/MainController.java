@@ -27,6 +27,7 @@ public class MainController implements Initializable {
 
 	@FXML
 	public void doSomeThing(ActionEvent event) {
+		System.out.println("event fired");
 		service.doSomeThing();
 	}
 

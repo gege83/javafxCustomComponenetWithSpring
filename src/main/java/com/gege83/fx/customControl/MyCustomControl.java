@@ -21,7 +21,7 @@ public class MyCustomControl extends HBox {
 	private final ObjectProperty<EventHandler<ActionEvent>> onClickMeHandler = new SimpleObjectProperty<>();
 
 	@FXML
-	protected void doClickMe(ActionEvent event) {
+	protected void clickMe(ActionEvent event) {
 		service.doSomeThing();
 		onClickMeHandler.get().handle(event);
 	}
@@ -39,7 +39,6 @@ public class MyCustomControl extends HBox {
 		}
 	}
 
-	//
 	public EventHandler<ActionEvent> getOnClickMe() {
 		return onClickMeHandler.get();
 	}
