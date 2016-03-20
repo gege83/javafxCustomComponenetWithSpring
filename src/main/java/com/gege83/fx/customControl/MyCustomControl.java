@@ -11,6 +11,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.HBox;
 
 @Component
@@ -28,8 +29,12 @@ public class MyCustomControl extends HBox {
 	public MyCustomControl(SomeService service, ApplicationContext applicationContext) {
 		this.service = service;
 		try {
-			SpringFXMLLoader.create().applicationContext(applicationContext)
-					.location(getClass().getResource("MyCustomControl.fxml")).load();
+			final FXMLLoader fxmlLoader = new FXMLLoader();
+			fxmlLoader.setRoot(this);
+			fxmlLoader.setController(this);
+			fxmlLoader.load(getClass().getResourceAsStream("MyCustomControl.fxml"));
+			// SpringFXMLLoader.create().applicationContext(applicationContext)
+			// .location(getClass().getResource("MyCustomControl.fxml")).load();
 		} catch (final IOException e) {
 			e.printStackTrace();
 		}
